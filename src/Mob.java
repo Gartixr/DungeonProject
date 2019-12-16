@@ -25,6 +25,8 @@ public class Mob {
 		
 	}
 
+	
+	//Getters & setters
 	public int getHp() {
 		return hp;
 	}
