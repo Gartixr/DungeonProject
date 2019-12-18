@@ -31,15 +31,17 @@ public class Mob {
 				System.out.println("Haz vençut al monstre");
 				//die();
 			}else {
+				System.out.println("vida total mob: " + this.hp);
 				this.hp -= dmg;
-				System.out.println("El heroi ha fet " + dmg+ " daño");
+				System.out.println("El heroi ha fet " + dmg+ " mal");
+				System.out.println("El monstre li queda " + this.hp);
 			}
 		}else {
+			System.out.println("vida total mob: " + this.hp);
 			System.out.println("Has fallat el cop");
 			
 		}
 	
-		
 	}
 	
 	public void die() {
