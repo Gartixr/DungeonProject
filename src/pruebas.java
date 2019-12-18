@@ -18,6 +18,7 @@ public class pruebas {
 				
 		while (!hero.die(hero) && !mob.die(mob)) {
 			if (torn % 2 == 0) {
+
 				hero.attack(mob);
 
 			} else {
