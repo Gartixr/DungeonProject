@@ -21,6 +21,29 @@ public class Mob {
 		
 	}
 	
+	public void defend(int damage) {
+		//Restem la vida del mob 
+		int dmg;
+		dmg = damage - (int) (Math.random() * this.defense);
+		
+		if(dmg > 0) {
+			if(this.hp < dmg) {
+				System.out.println("Haz vençut al monstre");
+				//die();
+			}else {
+				System.out.println("vida total mob: " + this.hp);
+				this.hp -= dmg;
+				System.out.println("El heroi ha fet " + dmg+ " mal");
+				System.out.println("El monstre li queda " + this.hp);
+			}
+		}else {
+			System.out.println("vida total mob: " + this.hp);
+			System.out.println("Has fallat el cop");
+			
+		}
+	
+	}
+	
 	public void die() {
 		
 	}
@@ -64,4 +87,6 @@ public class Mob {
 	public void setFear(int fear) {
 		this.fear = fear;
 	}
+	
+	
 }

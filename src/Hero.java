@@ -61,12 +61,14 @@ public class Hero {
 
 	}
 
-	public void attack() {
-
+	public void attack(Mob mob) {
+		//mob.setHp(mob.getHp()+mob.getDefense()-((int) (Math.random() * getStrength() + 0)));
+		mob.defend(((int) (Math.random() * getStrength() + 0)));
+		
 	}
 
 	public void defend() {
-
+		
 	}
 
 	public void loot() {
