@@ -43,7 +43,7 @@ public class Mob {
 		}
 	
 	}
-	
+	//fdf
 	public boolean die(Mob mob) {
 		return mob.hp <= 0;
 	}

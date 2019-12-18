@@ -97,7 +97,7 @@ public class Hero {
 			return hero.hp <= 0;
 	
 	}
-
+	//fdfd
 	public int getHp() {
 		return hp;
 	}

@@ -7,7 +7,7 @@ public class pruebas {
 		int torn = 0;
 		int combates = 0;
 		int win= 0;
-//				
+//	fdfdsgf			
 //		System.out.println("Vida monstre: " + mob.getHp());
 //        System.out.println("Vida heroi: " + hero.getHp());
 	
