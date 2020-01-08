@@ -1,4 +1,3 @@
-
 public class Armor extends Item {
 	private int baseDafense;
 	private final int MAX_VALUE = 3;
