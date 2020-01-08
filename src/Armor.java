@@ -3,6 +3,8 @@ public class Armor extends Item {
 	private final int MAX_VALUE = 3;
 	
 	public Armor(String name, String descrip) {
+		super.setName(name);
+		super.setDescrip(descrip);
 		this.baseDafense = (int) (Math.random() * MAX_VALUE + 1);
 	}
 

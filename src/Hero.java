@@ -93,11 +93,12 @@ public class Hero {
 		Collections itms = new Collections();
 		
 		int itm;
-		itm = (int) (Math.random() * 4);
+		itm = (int) (Math.random() * 5);
+		System.out.println(itm);
 		
 		int obj;
-		obj = (int) (Math.random() * 1);
-		
+		obj = (int) (Math.random() * 2);
+		System.out.println(obj);
 		switch(obj) {
 		case 0:
 			objecte = itms.getArmors(itm);
