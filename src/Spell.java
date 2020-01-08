@@ -1,9 +1,9 @@
 
-public class Spells extends Item {
+public class Spell extends Item {
 	private int basePower;
 	private final int MAX_VALUE = 3;
 
-	public Spells(int basePower) {
+	public Spell(int basePower) {
 		this.basePower = (int) (Math.random() * MAX_VALUE + 1);
 	}
 

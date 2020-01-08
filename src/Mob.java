@@ -11,18 +11,41 @@ public class Mob {
 			this.opt = optStats;
 		}
 		this.name = name;
-		this.hp = (int) (Math.random() * (10 + opt) + 6);
-		this.strength = (int) (Math.random() * (6 + opt) + 3);
-		this.defense = (int) (Math.random() * (6 + opt) + 3);
+		this.hp = (int) (Math.random() * (15 + opt) + 8);
+		this.strength = (int) (Math.random() * (10 + opt) + 3);
+		this.defense = (int) (Math.random() * (8 + opt) + 3);
 		this.fear = (int) (Math.random() * (3 + opt) + 1);
 	}
 
-	public void attack() {
-		
+	public void attack(Hero hero) {
+		hero.defend(((int) (Math.random() * getStrength() + 0)));
 	}
 	
-	public void die() {
+	public void defend(int damage) {
+		//Restem la vida del mob 
+		int dmg;
+		dmg = damage - (int) (Math.random() * this.defense);
 		
+		if(dmg > 0) {
+			if(this.hp < dmg) {
+				System.out.println("Has vençut al monstre");
+				this.hp = 0;
+			}else {
+				System.out.println("vida total mob: " + this.hp);
+				this.hp -= dmg;
+				System.out.println("El heroi ha fet " + dmg+ " mal");
+				System.out.println("El monstre li queda " + this.hp);
+			}
+		}else {
+			System.out.println("vida total mob: " + this.hp);
+			System.out.println("Has fallat el cop");
+			
+		}
+	
+	}
+	//fdf
+	public boolean die(Mob mob) {
+		return mob.hp <= 0;
 	}
 
 	public int getHp() {
@@ -64,4 +87,6 @@ public class Mob {
 	public void setFear(int fear) {
 		this.fear = fear;
 	}
+	
+	
 }

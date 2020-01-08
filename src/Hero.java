@@ -60,22 +60,43 @@ public class Hero {
 
 	}
 
-	public void attack() {
-
+	public void attack(Mob mob) {
+		mob.defend(((int) (Math.random() * getStrength() + 0)));
+		
 	}
 
-	public void defend() {
-
+	public void defend(int damage) {
+		//Restem la vida del heroi
+				int dmg;
+				dmg = damage - (int) (Math.random() * this.agility);
+				
+				if(dmg > 0) {
+					if(this.hp < dmg) {
+						System.out.println("Has perdut");
+						this.hp = 0;
+						
+					}else {
+						System.out.println("vida total heroi: " + this.hp);
+						this.hp -= dmg;
+						System.out.println("El monstre ha fet " + dmg+ " mal");
+						System.out.println("Al heroi li queda " + this.hp);
+					}
+				}else {
+					System.out.println("vida total heroi: " + this.hp);
+					System.out.println("El monstre ha fallat el cop");
+					
+				}
 	}
 
 	public void loot() {
 
 	}
 
-	public void die() {
-
+	public boolean die(Hero hero) {
+			return hero.hp <= 0;
+	
 	}
-
+	//fdfd
 	public int getHp() {
 		return hp;
 	}
