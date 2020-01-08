@@ -1,4 +1,3 @@
-
 public class Hero {
 	private int hp;
 	private int sp;
