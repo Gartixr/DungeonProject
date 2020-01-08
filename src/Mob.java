@@ -11,14 +11,14 @@ public class Mob {
 			this.opt = optStats;
 		}
 		this.name = name;
-		this.hp = (int) (Math.random() * (10 + opt) + 6);
-		this.strength = (int) (Math.random() * (6 + opt) + 3);
-		this.defense = (int) (Math.random() * (6 + opt) + 3);
+		this.hp = (int) (Math.random() * (15 + opt) + 8);
+		this.strength = (int) (Math.random() * (10 + opt) + 3);
+		this.defense = (int) (Math.random() * (8 + opt) + 3);
 		this.fear = (int) (Math.random() * (3 + opt) + 1);
 	}
 
-	public void attack() {
-		
+	public void attack(Hero hero) {
+		hero.defend(((int) (Math.random() * getStrength() + 0)));
 	}
 	
 	public void defend(int damage) {
@@ -28,8 +28,8 @@ public class Mob {
 		
 		if(dmg > 0) {
 			if(this.hp < dmg) {
-				System.out.println("Haz vençut al monstre");
-				//die();
+				System.out.println("Has vençut al monstre");
+				this.hp = 0;
 			}else {
 				System.out.println("vida total mob: " + this.hp);
 				this.hp -= dmg;
@@ -43,9 +43,9 @@ public class Mob {
 		}
 	
 	}
-	
-	public void die() {
-		
+	//fdf
+	public boolean die(Mob mob) {
+		return mob.hp <= 0;
 	}
 
 	public int getHp() {
