@@ -1,4 +1,3 @@
-
 public class Spell extends Item {
 	private int basePower;
 	private final int MAX_VALUE = 3;
