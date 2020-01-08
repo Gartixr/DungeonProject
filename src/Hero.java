@@ -10,15 +10,15 @@ public class Hero {
 	private int lore;
 	private int influence;
 	private int will;
-	
+
 	private Item mDreta;
 	private Item mEsquerra;
 	private Item armadura;
-	
+
 	private final int MAX_VALUE = 10;
 	private final String[] roles = {"Guerrero", "Mago", "Cazador"};
 
-//	Constructor de generaciÛ autom‡tica
+//	Constructor de generaci√≥ autom√†tica
 	public Hero(String name) {
 		super();
 		this.name = name;
@@ -33,7 +33,7 @@ public class Hero {
 		this.will = (int) (Math.random() * MAX_VALUE + 3);
 	}
 
-//	Constructor amb atributs per par‡metres
+//	Constructor amb atributs per par√†metres
 	public Hero(int hp, int sp, String name, String role, int strength, int agility, int observation, int lore,
 			int influence, int will) {
 		super();
@@ -64,11 +64,11 @@ public class Hero {
 	public void attack(Mob mob) {
 		//mob.setHp(mob.getHp()+mob.getDefense()-((int) (Math.random() * getStrength() + 0)));
 		mob.defend(((int) (Math.random() * getStrength() + 0)));
-		
+
 	}
 
 	public void defend() {
-		
+
 	}
 
 	public void loot() {
