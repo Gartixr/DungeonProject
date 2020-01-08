@@ -1,4 +1,3 @@
-
 public class Weapon extends Item {
 	private int baseDmg;
 	private final int MAX_VALUE = 3;

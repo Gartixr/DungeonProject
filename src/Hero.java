@@ -88,15 +88,32 @@ public class Hero {
 				}
 	}
 
-	public void loot() {
-
+	public Item loot() {
+		Item objecte = new Item();
+		Collections itms = new Collections();
+		
+		int itm;
+		itm = (int) (Math.random() * 4);
+		
+		int obj;
+		obj = (int) (Math.random() * 1);
+		
+		switch(obj) {
+		case 0:
+			objecte = itms.getArmors(itm);
+			break;
+		case 1:
+			objecte = itms.getPotions(itm);
+			break;
+		}
+		
+		return objecte;
 	}
 
 	public boolean die(Hero hero) {
 			return hero.hp <= 0;
 	
 	}
-	//fdfd
 	public int getHp() {
 		return hp;
 	}

@@ -51,4 +51,38 @@ public class Collections {
 		potions[4] = new Potion(0);
 		potions[4].setDropRate(50);
 	}
+
+	protected Item getArmors(int num) {
+		return armors[num];
+	}
+
+	protected void setArmors(Armor armor, int num) {
+		this.armors[num] = armor;
+	}
+
+	protected Potion getPotions(int num) {
+		return potions[num];
+	}
+
+	protected void setPotions(Potion potion, int num) {
+		this.potions[num] = potion;
+	}
+
+	protected Spell[] getSpell() {
+		return spell;
+	}
+
+	protected void setSpell(Spell[] spell) {
+		this.spell = spell;
+	}
+
+	protected Weapon[] getWeapons() {
+		return weapons;
+	}
+
+	protected void setWeapons(Weapon[] weapons) {
+		this.weapons = weapons;
+	}
+	
+	
 }
