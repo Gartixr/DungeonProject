@@ -14,39 +14,41 @@ public class Hero {
 	private Item mEsquerra;
 	private Item armadura;
 	
-	private final int MAX_VALUE = 10;
+	private final int MAX_VALUE = 4;
 	private final String[] roles = {"Guerrero", "Mago", "Cazador"};
 
 //	Constructor de generació automàtica
 	public Hero(String name) {
 		super();
 		this.name = name;
-		this.hp = (int) (Math.random() * (MAX_VALUE + 2) + 8);
-		this.sp = (int) (Math.random() * MAX_VALUE + 7);
+		this.hp = (int) (Math.random() * (MAX_VALUE)) + 8;
+		System.out.println("Vida : "+ this.getHp());
+		this.sp = (int) (Math.random() * MAX_VALUE) + 4;
 		this.role = this.roles[(int)(Math.random() * this.roles.length)];
-		this.strength = (int) (Math.random() * MAX_VALUE + 3);
-		this.agility = (int) (Math.random() * MAX_VALUE + 3);
-		this.observation = (int) (Math.random() * MAX_VALUE + 3);
-		this.lore = (int) (Math.random() * MAX_VALUE + 3);
-		this.influence = (int) (Math.random() * MAX_VALUE + 3);
-		this.will = (int) (Math.random() * MAX_VALUE + 3);
+		this.strength = (int) (Math.random() * MAX_VALUE) + 3;
+		this.agility = (int) (Math.random() * MAX_VALUE) + 3;
+		System.out.println("Agilitat : "+ this.agility);
+		this.observation = (int) (Math.random() * MAX_VALUE) + 3;
+		this.lore = (int) (Math.random() * MAX_VALUE) + 3;
+		this.influence = (int) (Math.random() * MAX_VALUE) + 3;
+		this.will = (int) (Math.random() * MAX_VALUE) + 3;
 	}
 
 //	Constructor amb atributs per paràmetres
-	public Hero(int hp, int sp, String name, String role, int strength, int agility, int observation, int lore,
-			int influence, int will) {
-		super();
-		this.hp = hp;
-		this.sp = sp;
-		this.name = name;
-		this.role = role;
-		this.strength = strength;
-		this.agility = agility;
-		this.observation = observation;
-		this.lore = lore;
-		this.influence = influence;
-		this.will = will;
-	}
+//	public Hero(int hp, int sp, String name, String role, int strength, int agility, int observation, int lore,
+//			int influence, int will) {
+//		super();
+//		this.hp = hp;
+//		this.sp = sp;
+//		this.name = name;
+//		this.role = role;
+//		this.strength = strength;
+//		this.agility = agility;
+//		this.observation = observation;
+//		this.lore = lore;
+//		this.influence = influence;
+//		this.will = will;
+//	}
 
 	public void equipItem(Item item) {
 
