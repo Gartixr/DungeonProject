@@ -42,14 +42,19 @@ public class Collections {
 	private void initPotions() {
 		potions[0] = new Potion(0);
 		potions[0].setDropRate(50);
+		potions[0].setName("Elixir de vida");
 		potions[1] = new Potion(1);
 		potions[1].setDropRate(50);
+		potions[0].setName("Elixir de salut mental");
 		potions[2] = new Potion(0);
 		potions[2].setDropRate(50);
+		potions[0].setName("Elixir de vida");
 		potions[3] = new Potion(1);
 		potions[3].setDropRate(50);
+		potions[0].setName("Elixir de salut mental");
 		potions[4] = new Potion(0);
 		potions[4].setDropRate(50);
+		potions[0].setName("Elixir de vida");
 	}
 
 	protected Item getArmors(int num) {
