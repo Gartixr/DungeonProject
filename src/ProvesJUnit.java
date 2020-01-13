@@ -17,26 +17,20 @@ class ProvesJUnit {
 	}
 
 	@Test
-	void testQueComprovaQueElHeroiAtacaIElMonstreEsProtegeix() {
+	void testQueComprovaQueElHeroiAtacaIElMonstrePerdVida() {
 		Hero hero1 = new Hero("Hero1");
 		Mob mob1 = new Mob("Mob1", 5);
 		int vidaMonstre = mob1.getHp();
 		hero1.attack(mob1);
 		assertTrue(mob1.getHp() <= vidaMonstre);
 	}
-
+	
 	@Test
-	void test2() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void test3() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	void test4() {
-		fail("Not yet implemented");
+	void testQueComprovaQueElMonstreAtacaIElHeroPerdVida() {
+		Hero hero = new Hero("Hero1");
+		Mob mob = new Mob("Mob1", 5);
+		int vidaHero = hero.getHp();
+		mob.attack(hero);
+		assertTrue(hero.getHp() <= vidaHero);
 	}
 }
