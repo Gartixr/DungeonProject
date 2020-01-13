@@ -1,6 +1,6 @@
 /**
  * 
- * Classe Hero on s'estructura la generaciÛ d'herois del joc
+ * Classe Hero on s'estructura la generaci√≥ d'herois del joc
  * 
  * @author Conrad Grau
  * @author Jonathan Sanchez
@@ -27,9 +27,9 @@ public class Hero {
 	private final String[] roles = { "Guerrero", "Mago", "Cazador" };
 
 	/**
-	 * Constructor de generaciÛ autom‡tica
+	 * Constructor de generaci√≥ autom√†tica
 	 *
-	 * @param String Li passarem una cadena de car‡cters que ser‡ el nom de l'heroi
+	 * @param String Li passarem una cadena de car√†cters que ser√† el nom de l'heroi
 	 *
 	 */
 	public Hero(String name) {
@@ -77,11 +77,12 @@ public class Hero {
 	}
 
 	/**
-	 * FunciÛ d'atac de l'heroi
+	 * Funci√≥ d'atac de l'heroi
 	 * 
 	 * @param Mob Mob al que ataquem
 	 */
 	public void attack(Mob mob) {
+
 		mob.defend(((int) (Math.random() * getStrength() + 0)));
 
 	}
@@ -89,9 +90,9 @@ public class Hero {
 	
 	/**
 	 * 
-	 * FunciÛ de defensa de l'heroi
+	 * Funci√≥ de defensa de l'heroi
 	 * 
-	 * @param int Valor numËric de mal
+	 * @param int Valor num√®ric de mal
 	 */
 	public void defend(int damage) {
 		// Restem la vida del heroi
@@ -119,7 +120,7 @@ public class Hero {
 	
 /**
  * 
- * FunciÛ de b˘squeda d'objectes de l'heroi
+ * Funci√≥ de b√πsqueda d'objectes de l'heroi
  * 
  * @return Item - Objecte que troba, si en troba :)
  */
@@ -148,18 +149,20 @@ public class Hero {
 
 	/**
 	 * 
-	 * FunciÛ que comprova si l'heroi es mort
+	 * Funci√≥ que comprova si l'heroi es mort
 	 * 
 	 * @param Hero
-	 * @return Boolean - True si Ès mort i false si Ès viu
+	 * @return Boolean - True si √©s mort i false si √©s viu
 	 */
 	public boolean die(Hero hero) {
+
 		return hero.hp <= 0;
+
 	}
 
 	/**
 	 * 
-	 * FunciÛ que retorna la vida de l'heroi
+	 * Funci√≥ que retorna la vida de l'heroi
 	 * 
 	 * @return int - Vida de l'heroi
 	 */
@@ -169,7 +172,7 @@ public class Hero {
 
 	/**
 	 * 
-	 * FunciÛ que assigna vida a l'heroi
+	 * Funci√≥ que assigna vida a l'heroi
 	 * 
 	 * @param int Vida a assignar
 	 */
@@ -178,7 +181,7 @@ public class Hero {
 	}
 
 	/**
-	 * FunciÛ que retorna la salut mental de l'horoi
+	 * Funci√≥ que retorna la salut mental de l'horoi
 	 * 
 	 * @return int Retorna la salut mental de l'heroi
 	 */
@@ -187,7 +190,7 @@ public class Hero {
 	}
 
 	/**
-	 *  FunciÛ que assigna la salut mental de l'heroi
+	 *  Funci√≥ que assigna la salut mental de l'heroi
 	 *  
 	 * @param int Assigna valor a la salut mental de l'heroi 
 	 */
