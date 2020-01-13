@@ -189,7 +189,7 @@ public class Hero {
 	/**
 	 *  Funció que assigna la salut mental de l'heroi
 	 *  
-	 * @param int Assigna valor a la salut mental de l'heroi
+	 * @param int Assigna valor a la salut mental de l'heroi 
 	 */
 	public void setSp(int sp) {
 		this.sp = sp;
