@@ -9,15 +9,15 @@ public class Hero {
 	private int lore;
 	private int influence;
 	private int will;
-	
+
 	private Item mDreta;
 	private Item mEsquerra;
 	private Item armadura;
-	
+
 	private final int MAX_VALUE = 10;
 	private final String[] roles = {"Guerrero", "Mago", "Cazador"};
 
-//	Constructor de generació automàtica
+//	Constructor de generaciï¿½ automï¿½tica
 	public Hero(String name) {
 		super();
 		this.name = name;
@@ -32,7 +32,7 @@ public class Hero {
 		this.will = (int) (Math.random() * MAX_VALUE + 3);
 	}
 
-//	Constructor amb atributs per paràmetres
+//	Constructor amb atributs per parï¿½metres
 	public Hero(int hp, int sp, String name, String role, int strength, int agility, int observation, int lore,
 			int influence, int will) {
 		super();
@@ -61,20 +61,21 @@ public class Hero {
 	}
 
 	public void attack(Mob mob) {
+
 		mob.defend(((int) (Math.random() * getStrength() + 0)));
-		
+
 	}
 
 	public void defend(int damage) {
 		//Restem la vida del heroi
 				int dmg;
 				dmg = damage - (int) (Math.random() * this.agility);
-				
+
 				if(dmg > 0) {
 					if(this.hp < dmg) {
 						System.out.println("Has perdut");
 						this.hp = 0;
-						
+
 					}else {
 						System.out.println("vida total heroi: " + this.hp);
 						this.hp -= dmg;
@@ -84,20 +85,20 @@ public class Hero {
 				}else {
 					System.out.println("vida total heroi: " + this.hp);
 					System.out.println("El monstre ha fallat el cop");
-					
+
 				}
 	}
 
 	public Item loot() {
 		Item objecte = new Item();
 		Collections itms = new Collections();
-		
+
 		int itm;
 		itm = (int) (Math.random() * 4);
-		
+
 		int obj;
 		obj = (int) (Math.random() * 1);
-		
+
 		switch(obj) {
 		case 0:
 			objecte = itms.getArmors(itm);
@@ -106,13 +107,13 @@ public class Hero {
 			objecte = itms.getPotions(itm);
 			break;
 		}
-		
+
 		return objecte;
 	}
 
 	public boolean die(Hero hero) {
 			return hero.hp <= 0;
-	
+
 	}
 	public int getHp() {
 		return hp;
