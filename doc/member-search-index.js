@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"<Unnamed>","c":"Spell","l":"getBasePower()"},{"p":"<Unnamed>","c":"Spell","l":"setBasePower(int)"},{"p":"<Unnamed>","c":"Spell","l":"Spell(int)","url":"%3Cinit%3E(int)"}]
