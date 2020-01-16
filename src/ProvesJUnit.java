@@ -16,6 +16,16 @@ class ProvesJUnit {
 	}
 	
 	@Test
+	void testQueComprovaQueElsAtributsDelMobNoSiguinMesGransOMesPetitsQueElsMinimsIMaxims() {
+		Mob mob = new Mob("Mob" , 0);
+		assertTrue(mob.getHp() >= 8 & mob.getHp() <= 15+8);
+		assertTrue(mob.getDefense() >= 3 & mob.getDefense() <= 8+3);
+		assertTrue(mob.getFear() >= 1 & mob.getFear() <= 3+1);
+		assertTrue(mob.getStrength() >= 3 & mob.getStrength() <= 10+3);
+		assertEquals("Mob", mob.getName());
+	}
+	
+	@Test
 	void testQueComprovaQueElHeroiEsDefenIMor() {
 		Hero hero = new Hero("Hero");
 		
@@ -143,6 +153,10 @@ class ProvesJUnit {
 	void testQueComprovaQueElHeroHaLotejatUnItem() {
 		Hero hero = new Hero("Hero");
 
-		hero.loot();
+		Armor armor = new Armor("test", "test2");
+		Potion potion = new Potion(0);
+		Item item = hero.loot();
+		
+		assertTrue(item == null || armor.getClass().equals(item.getClass()) || potion.getClass().equals(item.getClass()));
 	}
 }
