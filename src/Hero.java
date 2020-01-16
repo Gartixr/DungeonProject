@@ -36,12 +36,10 @@ public class Hero {
 		super();
 		this.name = name;
 		this.hp = (int) (Math.random() * (MAX_VALUE)) + 8;
-		System.out.println("Vida : " + this.getHp());
 		this.sp = (int) (Math.random() * MAX_VALUE) + 4;
 		this.role = this.roles[(int) (Math.random() * this.roles.length)];
 		this.strength = (int) (Math.random() * MAX_VALUE) + 3;
 		this.agility = (int) (Math.random() * MAX_VALUE) + 3;
-		System.out.println("Agilitat : " + this.agility);
 		this.observation = (int) (Math.random() * MAX_VALUE) + 3;
 		this.lore = (int) (Math.random() * MAX_VALUE) + 3;
 		this.influence = (int) (Math.random() * MAX_VALUE) + 3;
@@ -119,7 +117,6 @@ public class Hero {
 			objecte = itms.getPotions(itm);
 			break;
 		}
-
 		return objecte;
 	}
 
