@@ -23,6 +23,14 @@ public class Weapon extends Item {
 		return baseDmg;
 	}
 
+
+	/**
+	 * Funcio d'assignacio de dany base
+	 * 
+	 * @param int Dany base
+	 */
+
+
 	public void setBaseDmg(int baseDmg) {
 		this.baseDmg = baseDmg;
 	}
