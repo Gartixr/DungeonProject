@@ -154,9 +154,9 @@ public class Hero {
 	 * @param Hero
 	 * @return Boolean - True si és mort i false si és viu
 	 */
-	public boolean die(Hero hero) {
+	public boolean die() {
 
-		return hero.hp <= 0;
+		return this.hp <= 0;
 
 	}
 
