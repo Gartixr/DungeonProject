@@ -14,10 +14,10 @@ public class Mob {
 	private int opt = 0;
 	
 	/**
-	 * Funció que genera atributs al mob
+	 * FunciÃ³ que genera atributs al mob
 	 * 
 	 * @param name nom del mob
-	 * @param optStats número de estats opcional per si volem fer mes o menys fort al mob
+	 * @param optStats nÃºmero de estats opcional per si volem fer mes o menys fort al mob
 	 */
 	public Mob(String name, int optStats) {
 		if(optStats >= 0) {
@@ -31,7 +31,7 @@ public class Mob {
 	}
 
 	/** 
-	 * Mètode que calcula el mal que fa el mob amb un número random tenint en compte la defensa del heroi
+	 * MÃ¨tode que calcula el mal que fa el mob amb un nÃºmero random tenint en compte la defensa del heroi
 	 * 
 	 * @param hero pasem el nostre heroi per poder fer el calcul del mal del mob
 	 */
@@ -40,7 +40,7 @@ public class Mob {
 	}
 	
 	/**
-	 * Mètode per calcular el mal que rep el mob al rebre un atac del heroi
+	 * MÃ¨tode per calcular el mal que rep el mob al rebre un atac del heroi
 	 * 
 	 * 
 	 * @param damage dany que fa el heroi
@@ -52,7 +52,7 @@ public class Mob {
 		
 		if(dmg > 0) {
 			if(this.hp < dmg) {
-				System.out.println("Has vençut al monstre");
+				System.out.println("Has venÃ§ut al monstre");
 				this.hp = 0;
 			}else {
 				System.out.println("vida total mob: " + this.hp);
@@ -68,60 +68,60 @@ public class Mob {
 	
 	}
 	/**
-	 * Mètode per veure si el mob ha mort
+	 * MÃ¨tode per veure si el mob ha mort
 	 * 
 	 * @param mob Pasem el nostre mob 
 	 * @return 0 si la vida del mob arriba o baixa de 0
 	 */
-	public boolean die(Mob mob) {
-		return mob.hp <= 0;
+	public boolean die() {
+		return this.hp <= 0;
 	}
 	
 	/**
-	 * funció que retorna la vida del mob
+	 * funciÃ³ que retorna la vida del mob
 	 * @return hp Vida del mob
 	 */
 	public int getHp() {
 		return hp;
 	}
 /**
- * funció que assigna la vida del mob
+ * funciÃ³ que assigna la vida del mob
  * @param hp Assigna vida mob
  */
 	public void setHp(int hp) {
 		this.hp = hp;
 	}
 /**
- * Funció que retorna el nom del mob
+ * FunciÃ³ que retorna el nom del mob
  * @return name Nom de mob
  */
 	public String getName() {
 		return name;
 	}
 /**
- *Funció que assigna el nom al mob
+ *FunciÃ³ que assigna el nom al mob
  * @param name nom del mob
  */
 	public void setName(String name) {
 		this.name = name;
 	}
 	/**
-	 *Funció que retorna la força al mob
-	 *@return strength força del mob
+	 *FunciÃ³ que retorna la forÃ§a al mob
+	 *@return strength forÃ§a del mob
 	 */
 	public int getStrength() {
 		return strength;
 	}
 	/**
-	 *Funció que assigna la força al mob
-	 * @param strength força del mob
+	 *FunciÃ³ que assigna la forÃ§a al mob
+	 * @param strength forÃ§a del mob
 	 */
 	public void setStrength(int strength) {
 		this.strength = strength;
 	}
 	
 	/**
-	 *Funció que retorna la defenda del mob
+	 *FunciÃ³ que retorna la defenda del mob
 	 * @return defense defensa del mob
 	 */
 	public int getDefense() {
@@ -129,7 +129,7 @@ public class Mob {
 	}
 	
 	/**
-	 *Funció que assigna la defensa al mob
+	 *FunciÃ³ que assigna la defensa al mob
 	 * @param defense defensa del mob
 	 */
 	public void setDefense(int defense) {
@@ -137,7 +137,7 @@ public class Mob {
 	}
 	
 	/**
-	 *Funció que retorna la por que fa el mob
+	 *FunciÃ³ que retorna la por que fa el mob
 	 * @return fear Por que fa el mob
 	 */
 	public int getFear() {
@@ -145,7 +145,7 @@ public class Mob {
 	}
 	
 	/**
-	 *Funció que assigna la por que fa el mob
+	 *FunciÃ³ que assigna la por que fa el mob
 	 * @param fear por que fa el mob
 	 */
 	public void setFear(int fear) {
