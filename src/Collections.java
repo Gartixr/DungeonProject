@@ -3,7 +3,6 @@
  * @author Jonathan Sanchez
  * @author Adria Dumitrica
  * @author Christian Rigau
- * @author 
  *
  */
 public class Collections {
