@@ -81,6 +81,7 @@ public class Hero {
 
 	}
 
+	
 	public void attack(Mob mob) {
 		mob.defend(((int) (Math.random() * getStrength() + 0)));
 
