@@ -3,7 +3,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class ProvesJUnit {
-
+	
+	
 	@Test
 	void testQueComprovaQueElsAtributsDelHeroNoSiguinMesGransOMesPetitsQueElsMinimsIMaxims() {
 		Hero hero = new Hero("Hero");
