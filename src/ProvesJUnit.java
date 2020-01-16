@@ -1,9 +1,10 @@
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
-
 class ProvesJUnit {
-
+	
+	
 	@Test
 	void testQueComprovaQueElsAtributsDelHeroNoSiguinMesGransOMesPetitsQueElsMinimsIMaxims() {
 		Hero hero = new Hero("Hero");
@@ -13,55 +14,6 @@ class ProvesJUnit {
 		assertTrue(hero.getLore() > 2 & hero.getLore() < 14);
 		assertTrue(hero.getObservation() > 2 & hero.getObservation() < 14);
 		assertEquals("Hero", hero.getName());
-	}
-	
-	@Test
-	void testQueComprovaQueElsAtributsDelMobNoSiguinMesGransOMesPetitsQueElsMinimsIMaxims() {
-		Mob mob = new Mob("Mob" , 0);
-		assertTrue(mob.getHp() >= 8 & mob.getHp() <= 15+8);
-		assertTrue(mob.getDefense() >= 3 & mob.getDefense() <= 8+3);
-		assertTrue(mob.getFear() >= 1 & mob.getFear() <= 3+1);
-		assertTrue(mob.getStrength() >= 3 & mob.getStrength() <= 10+3);
-		assertEquals("Mob", mob.getName());
-	}
-	
-	@Test
-	void testQueComprovaQueElHeroiEsDefenIMor() {
-		Hero hero = new Hero("Hero");
-		
-		hero.setAgility(0);
-		hero.setHp(5);
-		hero.defend(10);
-
-	}
-	
-	@Test
-	void testQueComprovaQueElHeroiEsDefenIPerdVida() {
-		Hero hero = new Hero("Hero");
-		
-		hero.setAgility(0);
-		hero.setHp(10);
-		hero.defend(5);
-
-	}
-	
-	@Test
-	void testQueComprovaQueElMobEsDefenIMor() {
-		Mob mob = new Mob("Mob", 5);
-		
-		mob.setDefense(0);
-		mob.setHp(5);
-		mob.defend(10);
-	}
-	
-	@Test
-	void testQueComprovaQueElMobEsDefenIPerdVida() {
-		Mob mob = new Mob("Mob", 5);
-		
-		mob.setDefense(0);
-		mob.setHp(5);
-		mob.defend(10);
-
 	}
 
 	@Test
@@ -153,10 +105,6 @@ class ProvesJUnit {
 	void testQueComprovaQueElHeroHaLotejatUnItem() {
 		Hero hero = new Hero("Hero");
 
-		Armor armor = new Armor("test", "test2");
-		Potion potion = new Potion(0);
-		Item item = hero.loot();
-		
-		assertTrue(item == null || armor.getClass().equals(item.getClass()) || potion.getClass().equals(item.getClass()));
+		hero.loot();
 	}
 }
