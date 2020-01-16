@@ -1,3 +1,16 @@
+/**
+ * Classe que genera una arma
+ * 
+ * @author Krull Van-Thack
+ * 
+ * @author Conrad Grau
+ * @author Jonathan Sanchez
+ * @author Adria Dumitrica
+ * @author Cristian Rigau
+ * 
+ * @version 0.1
+ *
+ */
 public class Weapon extends Item {
 	private int baseDmg;
 	private final int MAX_VALUE = 3;

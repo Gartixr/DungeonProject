@@ -1,4 +1,11 @@
-
+/**
+ * @author Conrad Grau
+ * @author Jonathan Sanchez
+ * @author Adria Dumitrica
+ * @author Christian Rigau
+ * @author 
+ *
+ */
 public class Collections {
 //	Classe que genera i gestiona grups d'objectes
 	private Armor[] armors = new Armor[5];
@@ -10,7 +17,10 @@ public class Collections {
 		initArmors();
 		initPotions();
 	}
-	
+	/**
+	 * Funció on creem armadures, assignem la defensa base i la possibiltat d'obtenció
+	 * 
+	 */
 	private void initArmors() {
 		armors[0] = new Armor("Draps bruts", "Troços de tela que bé haurien pogut ser els ropatjes d'un granjer, "
 				+ "però pel seu aspecte podrien haver estat qualsevol cosa...");
@@ -38,7 +48,9 @@ public class Collections {
 		armors[4].setBaseDafense(6);
 		armors[4].setDropRate(50);
 	}
-	
+	/**
+	 * Funcio on creem pocions i amb la seva possibilitat d'obtenció
+	 */
 	private void initPotions() {
 		potions[0] = new Potion(0);
 		potions[0].setDropRate(50);
