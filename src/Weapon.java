@@ -1,5 +1,5 @@
 /**
- * Calsse que genera una arma
+ * Classe que genera una arma
  * 
  * @author Krull Van-Thack
  * 
