@@ -35,6 +35,7 @@ public class Weapon extends Item {
 
 	/**
 	 * Funcio d'assignació de dany base
+	 * w
 	 * 
 	 * @param int Dany base
 	 */
