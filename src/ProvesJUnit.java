@@ -1,6 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.jupiter.api.Test;
+
 
 class ProvesJUnit {
 
@@ -13,6 +13,45 @@ class ProvesJUnit {
 		assertTrue(hero.getLore() > 2 & hero.getLore() < 14);
 		assertTrue(hero.getObservation() > 2 & hero.getObservation() < 14);
 		assertEquals("Hero", hero.getName());
+	}
+	
+	@Test
+	void testQueComprovaQueElHeroiEsDefenIMor() {
+		Hero hero = new Hero("Hero");
+		
+		hero.setAgility(0);
+		hero.setHp(5);
+		hero.defend(10);
+
+	}
+	
+	@Test
+	void testQueComprovaQueElHeroiEsDefenIPerdVida() {
+		Hero hero = new Hero("Hero");
+		
+		hero.setAgility(0);
+		hero.setHp(10);
+		hero.defend(5);
+
+	}
+	
+	@Test
+	void testQueComprovaQueElMobEsDefenIMor() {
+		Mob mob = new Mob("Mob", 5);
+		
+		mob.setDefense(0);
+		mob.setHp(5);
+		mob.defend(10);
+	}
+	
+	@Test
+	void testQueComprovaQueElMobEsDefenIPerdVida() {
+		Mob mob = new Mob("Mob", 5);
+		
+		mob.setDefense(0);
+		mob.setHp(5);
+		mob.defend(10);
+
 	}
 
 	@Test
