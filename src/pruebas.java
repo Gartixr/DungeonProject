@@ -15,7 +15,7 @@ public class pruebas {
     		Hero hero = new Hero("Hero");
     		Mob mob = new Mob("Mob", 0);
 				
-		while (!hero.die(hero) && !mob.die(mob)) {
+		while (!hero.die() && !mob.die()) {
 			if (torn % 2 == 0) {
 
 				hero.attack(mob);
@@ -24,7 +24,7 @@ public class pruebas {
 				mob.attack(hero);
 
 			}
-			if(mob.die(mob)) {
+			if(mob.die()) {
 				win++;
 			}
 			torn++;
