@@ -1,13 +1,13 @@
 /**
  * Classe que genera una arma
- * 
+ *
  * @author Krull Van-Thack
- * 
+ *
  * @author Conrad Grau
  * @author Jonathan Sanchez
  * @author Adria Dumitrica
  * @author Cristian Rigau
- * 
+ *
  * @version 0.1
  *
  */
@@ -17,7 +17,7 @@ public class Weapon extends Item {
 
 	/**
 	 * Constructor de l'arma
-	 * 
+	 *
 	 * @param int Dany base
 	 */
 	public Weapon(int baseDmg) {
@@ -25,8 +25,8 @@ public class Weapon extends Item {
 	}
 
 	/**
-	 * Funció que retorna del dany base
-	 * 
+	 * Funciï¿½ que retorna del dany base
+	 *
 	 * @return int Dany Base
 	 */
 	public int getBaseDmg() {
@@ -34,11 +34,11 @@ public class Weapon extends Item {
 	}
 
 	/**
-	 * Funcio d'assignació de dany base
-	 * w
-	 * 
+	 * Funcio d'assignacio de dany base
+	 *
 	 * @param int Dany base
 	 */
+
 	public void setBaseDmg(int baseDmg) {
 		this.baseDmg = baseDmg;
 	}
