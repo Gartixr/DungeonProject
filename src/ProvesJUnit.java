@@ -35,6 +35,7 @@ class ProvesJUnit {
 		mob.setDefense(0);
 		mob.setHp(5);
 		mob.defend(10);
+		assertEquals(true, mob.die());
 	}
 	
 	@Test
@@ -43,7 +44,9 @@ class ProvesJUnit {
 		
 		mob.setDefense(0);
 		mob.setHp(5);
-		mob.defend(10);
+		int vida = mob.getHp();
+		mob.defend(1);
+		assertTrue(mob.getHp() < vida);
 
 	}
 	
